@@ -1,0 +1,29 @@
+GIT
+  remote: git://github.com/tddium/rfuse-ng.git
+  revision: 6aa696aacc4921e7d921f86af16136bae857b98d
+  specs:
+    rfuse_ng (0.0.3)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    crate_api (0.1.1)
+      httmultiparty (>= 0.3.0)
+      json (>= 1.5.1)
+    httmultiparty (0.3.6)
+      httparty (>= 0.7.3)
+      multipart-post
+    httparty (0.8.1)
+      multi_json
+      multi_xml
+    json (1.6.1)
+    multi_json (1.0.3)
+    multi_xml (0.4.1)
+    multipart-post (1.1.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  crate_api
+  rfuse_ng!
