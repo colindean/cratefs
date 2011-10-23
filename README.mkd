@@ -1,0 +1,34 @@
+CrateFS
+=======
+
+http://github.com/colindean/cratefs
+
+by @colindean
+
+Introduction
+------------
+
+CrateFS is a FUSE filesystem for [Crate](http://letscrate.com) written in Ruby.
+
+Pre-requisites
+--------------
+
+* Ruby 1.9.2
+* A few gems
+
+Use
+---
+
+`cratefs --user $USERNAME --password $PASSWORD $MOUNTPOINT`
+
+Alternatively, you can create .cratefsrc in your $HOME and populate it like so:
+
+```
+user: USERNAME
+password: PASSWORD
+```
+
+License
+-------
+
+TBD
