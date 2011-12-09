@@ -16,6 +16,13 @@ Pre-requisites
 * Ruby 1.9.2
 * A few gems
 
+
+System Packages
+---------------
+ For Ubuntu 11.10, in order to compile the FUSE gem, you'll need the following packages:
+
+ `libfuse-dev libfuse2 libfusefs-ruby libfusefs-ruby1.8`
+
 Use
 ---
 
