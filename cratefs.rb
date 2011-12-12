@@ -1,7 +1,22 @@
+=begin
+cratefs
+=======
+
+A FUSE filesystem for Crate written in Ruby
+
+Copyright 2011 Colin Dean
+
+Crate is copyright Crate, LLC.
+http://letscrate.com
+=end
+
 require 'rubygems'
 require 'bundler/setup'
 Bundler.require
 require 'syck'
+
+#inspiration:
+#https://github.com/tddium/rfuse-ng/blob/master/sample/test-ruby.rb
 
 class CrateFS < RFuse::Fuse
 
