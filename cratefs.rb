@@ -1,5 +1,6 @@
-require 'crate_api'
-require 'rfuse_ng'
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require
 require 'syck'
 
 class CrateFS < RFuse::Fuse
@@ -25,6 +26,7 @@ class CrateFS < RFuse::Fuse
   end
 
   def readdir ctx, path, filler, offset, ffi
+    d = root.search path
 
   end
 
@@ -126,4 +128,12 @@ class CrateFS < RFuse::Fuse
 
   end
 
+end
+
+class CrateDir
+  #wrapper class
+  
+  def initialize 
+
+  end
 end

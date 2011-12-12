@@ -19,9 +19,10 @@ Pre-requisites
 
 System Packages
 ---------------
- For Ubuntu 11.10, in order to compile the FUSE gem, you'll need the following packages:
+For at least Ubuntu 11.10, you'll need the following packages in order to 
+compile the FUSE gem:
 
- `libfuse-dev libfuse2 libfusefs-ruby libfusefs-ruby1.8`
+`sudo apt-get install libfuse-dev libfuse2 libfusefs-ruby libfusefs-ruby1.8`
 
 Use
 ---
@@ -35,7 +36,20 @@ user: USERNAME
 password: PASSWORD
 ```
 
+Check out the rc-sample file for any other options that may crop up during 
+development of this software.
+
 License
 -------
 
-TBD
+TBD, something permissive. BSD? MIT? 
+
+Contributing
+------------
+
+I welcome patches via Github pull requests or private email.
+
+I really could use some tests, especially as I get closer to a functioning
+system.
+
+Clone the repo and run `bundle install` to get everything needed.
