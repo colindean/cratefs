@@ -14,6 +14,7 @@ http://letscrate.com
 #https://github.com/tddium/rfuse-ng/blob/master/sample/test-ruby.rb
 
 class CrateDir < Hash
+  include XattrObject
   #wrapper class
 
   attr_accessor :subdirs
@@ -21,7 +22,7 @@ class CrateDir < Hash
   attr_accessor :cratedir
   
   def initialize name, mode, is_root=false
-    subdirs = []
+    @subdirs = []
     @root = is_root
     @uid = @gid = @actime = @modtime = 0
     @xattr = Hash.new
@@ -35,22 +36,6 @@ class CrateDir < Hash
 
   def root?
     @root
-  end
-
-  def listxattr
-    @xattr.each {|k,v| list = list + k + "\0"}
-  end
-
-  def setxattr name, value, flag
-    @xattr[name] = value #TODO: respect flag
-  end
-
-  def getxattr name
-    @xattr[name]
-  end
-
-  def removexattr name
-    @xattr.delete name
   end
 
   def dir_mode
