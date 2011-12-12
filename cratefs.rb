@@ -21,7 +21,6 @@ require 'syck'
 class CrateFS < RFuse::Fuse
 
   attr_accessor :config
-  attr_accessor :client
   attr_reader :root
 
   def initialize mnt, kernelopt, libopt, root
@@ -38,6 +37,10 @@ class CrateFS < RFuse::Fuse
     config.merge YAML::load_file f
     return true if config["user"] and config["pass"]
     false
+  end
+
+  def client
+    @client ||= CrateAPI.new config["user"], config["pass"]
   end
 
   def readdir ctx, path, filler, offset, ffi
