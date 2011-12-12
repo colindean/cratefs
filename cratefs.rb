@@ -130,10 +130,105 @@ class CrateFS < RFuse::Fuse
 
 end
 
-class CrateDir
+#TODO: separate this into another file
+class CrateDir < Hash
   #wrapper class
   
-  def initialize 
+  def initialize name, mode
 
   end
+
+  def listxattr
+
+  end
+
+  def setxattr name, value, flag
+
+  end
+
+  def getxattr name
+
+  end
+
+  def removexattr name
+
+  end
+
+  def dir_mode
+
+  end
+
+  def size
+
+  end
+
+  def isdir
+    true
+  end
+
+  def insert_obj obj, path
+
+  end
+
+  def remove_obj path
+
+  end
+
+  def search path
+
+  end
+
+  def follow path_array
+
+  end
+
+  def to_s
+
+  end
+end
+
+#TODO: separate this into another file
+class CrateFile
+  #wrapper class
+
+  def initialize
+
+  end
+
+  def listxattr
+
+  end
+
+  def setxattr name, value, flag
+
+  end
+
+  def getxattr name
+
+  end
+
+  def removexattr name
+
+  end
+
+  def size
+
+  end
+
+  def dir_mode
+
+  end
+
+  def isdir
+    false
+  end
+
+  def follow path_array
+
+  end
+
+  def to_s
+
+  end
+
 end
