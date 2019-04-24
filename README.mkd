@@ -1,3 +1,6 @@
+_:warning: This is no longer maintained._
+
+
 CrateFS
 =======
 
